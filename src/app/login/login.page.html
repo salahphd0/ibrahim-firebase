@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+  <ion-item>
+    <ion-label>Email </ion-label>
+    <ion-input #email></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Password </ion-label>
+    <ion-input #password ></ion-input>
+  </ion-item>
+</ion-card-content>
+</ion-card>
+  <ion-button
+    (click)="authService.login(email.value.toString(), password.value.toString())"
+  >
+    Login
+  </ion-button>
+  <ion-button  (click)="authService.register(email.value.toString(), password.value.toString())">
+    Register
+   </ion-button>
+</ion-content>
