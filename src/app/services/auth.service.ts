@@ -11,7 +11,6 @@ import { promise } from 'protractor';
 export class AuthService {
   user= new BehaviorSubject<firebase.User | boolean>(false);
   userData: firebase.User;
-  subscribe: any;
   constructor(private fireAuth: AngularFireAuth) {
     fireAuth.authState.subscribe(user => {
     if (user){

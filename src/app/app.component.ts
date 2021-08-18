@@ -9,8 +9,8 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   constructor(private authService: AuthService, private router: Router) {
-    this.authService.subscribe((user: any)=>{
-      this.router.navigate([user? '/home' :'/login']);
+    this.authService.user.subscribe((user: any)=>{
+      this.router.navigate([user ? '/home' :'/login']);
     });
    }
 }
